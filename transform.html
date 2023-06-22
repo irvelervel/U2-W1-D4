@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proprietà CSS transform</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .rotate {
+        background-color: greenyellow;
+        transform: rotate(45deg);
+        /* ruota un elemento di tot gradi sul proprio asse, valori positivi vanno in senso orario */
+      }
+
+      .skew {
+        background-color: orange;
+        margin-top: 50px;
+        transform: skew(15deg, 20deg);
+        /* permette di storgere un elemento "tirando" i suoi estremi */
+      }
+
+      .scale {
+        background-color: cadetblue;
+        margin-top: 50px;
+        transform: scale(1.2);
+        /* scale 1 è il valore della dimensione originale, valori più alti ingrandiscono, valori più piccoli rimpiccioliscono */
+      }
+
+      .translate {
+        margin-top: 50px;
+        background-color: navy;
+        color: white;
+        transform: translate(100px, 50px);
+        /* si dichiara la traslazione sugli assi x e y, valori positivi di x vanno a dx, valori positivi di y vanno verso il basso */
+      }
+
+      .multiple {
+        margin-top: 115px;
+        background-color: lightcoral;
+        transform: rotate(45deg) scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- La proprietà CSS "transform" permette di apportare delle trasformazioni grafiche agli elementi HTML -->
+    <!-- NON è possibile utilizzare queste proprietà per risolvere problemi di impaginazione -->
+    <!-- perchè anche se "trasformati" gli elementi andranno fisicamente ad occupare lo stesso spazio, e anzi
+    rischiano di sovrastarne altri per colpa delle nostre rotazioni, ingradimenti etc. -->
+    <h1>PROPRIETÀ TRANSFORM</h1>
+    <h3>Transform rotate</h3>
+    <div class="box rotate">
+      <div>ROTATE</div>
+    </div>
+    <div class="box skew">
+      <div>SKEW</div>
+    </div>
+    <div class="box scale">
+      <div>SCALE</div>
+    </div>
+    <div class="box translate">
+      <div>TRANSLATE</div>
+    </div>
+    <div class="box multiple">
+      <div>ROTATE + SCALE</div>
+    </div>
+  </body>
+</html>
